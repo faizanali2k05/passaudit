@@ -1,4 +1,4 @@
-streamlit==1.39.0
-zxcvbn-python==4.4.28
-requests==2.32.3
-pandas==2.2.3
+streamlit==1.57.0
+zxcvbn==4.5.0
+requests==2.34.0
+pandas==2.3.3

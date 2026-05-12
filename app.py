@@ -16,8 +16,8 @@ from passaudit_core import (
 
 # ---------- page setup ----------
 st.set_page_config(
-    page_title="passaudit",
-    page_icon="🔒",
+    page_title="PassAudit",
+    page_icon="🔐",
     layout="centered",
     menu_items={"About": "passaudit — local password auditor with HIBP k-anonymity breach check."},
 )
@@ -87,8 +87,9 @@ with tab_audit:
             f"<span style='color:{SCORE_COLORS[score]};font-weight:600'>{SCORE_LABELS[score]}</span>",
             unsafe_allow_html=True,
         )
+        default_bg = "#e5e7eb"
         segs = "".join(
-            f"<div class='pw-seg' style='background:{SCORE_COLORS[score] if i <= score else \"#e5e7eb\"}'></div>"
+            f"<div class='pw-seg' style='background:{SCORE_COLORS[score] if i <= score else default_bg}'></div>"
             for i in range(5)
         )
         st.markdown(f"<div class='pw-meter'>{segs}</div>", unsafe_allow_html=True)
